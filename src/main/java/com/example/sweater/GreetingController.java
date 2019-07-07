@@ -20,4 +20,4 @@ public class GreetingController {
         return "main";
     }
 }
-//Просто ради проверки
+//Просто ради проверки № 2
