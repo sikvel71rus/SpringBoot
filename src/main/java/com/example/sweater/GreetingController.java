@@ -20,3 +20,4 @@ public class GreetingController {
         return "main";
     }
 }
+//Просто ради проверки
