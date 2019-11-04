@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface MessageRepo extends CrudRepository<Message, Long> {
    List<Message> findByTag(String tag);
-//add some information
+
 }
 //Репозиторий позволяет нам получить полный список полей, либо получить список полей по идентификатору
