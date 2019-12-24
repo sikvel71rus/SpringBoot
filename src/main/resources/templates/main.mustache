@@ -1,15 +1,26 @@
 <html>
 
 <body>
+    <div>Сохранить сообщение</div>
     <div>
-        <form method="post">
+        <form method="post" action ="/">
             <input type="text" name = "text" placeholder = "Введите сообщение" />
             <input type="text" name = "tag" placeholder = "Тэг" >
             <button type = "submit">Добавить</button>
+<!--            <button type = "submit">Удалить</button>-->
+        </form>
+    </div>
+    <div>Удалить сообщение</div>
+    <div>
+        <form method="post" action="/delete">
+            <input type="text" name = "text" placeholder = "Введите сообщение" />
+            <input type="text" name = "tag" placeholder = "Тэг" >
+            <button type = "submit">Удалить</button>
         </form>
     </div>
     <div>Список сообщений</div>
-    <form method="post" action="filter">
+
+    <form method="post" action="/filter">
         <input type="text" name="filter">
         <button type="submit">Найти</button>
     </form>
@@ -20,5 +31,7 @@
         <i>{{tag}}</i>
     </div>
     {{/messages}}
+
+
 </body>
 </html>
