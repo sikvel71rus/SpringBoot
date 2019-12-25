@@ -1,9 +1,14 @@
 <html>
 
 <body>
+    <form action="/logout" method="post">
+        <input type="submit" value ="Sing out"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+    </form>
     <div>Сохранить сообщение</div>
     <div>
-        <form method="post" action ="/">
+        <form method="post" action ="/main">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <input type="text" name = "text" placeholder = "Введите сообщение" />
             <input type="text" name = "tag" placeholder = "Тэг" >
             <button type = "submit">Добавить</button>
@@ -13,6 +18,7 @@
     <div>Удалить сообщение</div>
     <div>
         <form method="post" action="/delete">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
             <input type="text" name = "text" placeholder = "Введите сообщение" />
             <input type="text" name = "tag" placeholder = "Тэг" >
             <button type = "submit">Удалить</button>
@@ -21,6 +27,7 @@
     <div>Список сообщений</div>
 
     <form method="post" action="/filter">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
         <input type="text" name="filter">
         <button type="submit">Найти</button>
     </form>
