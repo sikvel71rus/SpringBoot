@@ -19,8 +19,7 @@
     <div>
         <form method="post" action="/delete">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-            <input type="text" name = "text" placeholder = "Введите сообщение" />
-            <input type="text" name = "tag" placeholder = "Тэг" >
+            <input type="text" name = "text" placeholder = "Введите Ид" />
             <button type = "submit">Удалить</button>
         </form>
     </div>
@@ -28,7 +27,7 @@
 
     <form method="post" action="/filter">
         <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-        <input type="text" name="filter">
+        <input type="text" name="filter" placeholder="Введите тэг">
         <button type="submit">Найти</button>
     </form>
     {{#messages}}
@@ -36,6 +35,7 @@
         <b>{{id}}</b>
         <span>{{text}}</span>
         <i>{{tag}}</i>
+        <strong>{{authorName}}</strong>
     </div>
     {{/messages}}
 
